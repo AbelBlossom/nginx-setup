@@ -9,7 +9,7 @@ if [ $? -ne 0 ]; then
   exit 1
 fi
 
-nginx -v > /dev/null 2>&1
+nginx -v 
 if [ $? -ne 0 ]; then
   echo nginx not installed installing...
   
