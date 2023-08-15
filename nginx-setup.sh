@@ -8,30 +8,26 @@ if [ $? -ne 0 ]; then
   echo Unable to remove apache
   exit 1
 fi
-
-nginx -v 
-if [ $? -ne 0 ]; then
-  echo nginx not installed installing...
   
-  ## update packages
-  echo updating packages ...
-  sudo apt -y update
+## update packages
+echo updating packages ...
+sudo apt -y update
 
-  if [ $? -ne 0 ]; then
-    echo Unable to Update Packages
-    exit 1
-  fi
-
-
-  ## install nginx
-  echo installing nginx
-  sudo apt install -y nginx
-
-  if [ $? -ne 0 ]; then
-    echo Unable to Install Nginx
-    exit 1
-  fi
+if [ $? -ne 0 ]; then
+  echo Unable to Update Packages
+  exit 1
 fi
+
+
+## install nginx
+echo installing nginx
+sudo apt install -y nginx
+
+if [ $? -ne 0 ]; then
+  echo Unable to Install Nginx
+  exit 1
+fi
+
 
 ## enable firewall
 echo Enabling Firewall
