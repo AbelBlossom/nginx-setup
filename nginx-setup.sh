@@ -47,11 +47,11 @@ read PORT
 
 LOCAL_SERVER=http://localhost:$PORT
 
-# AVAILABLE_DIR=/etc/nginx/sites-available
-# ENABLED_DIR=/etc/nginx/sites-enabled
+AVAILABLE_DIR=/etc/nginx/sites-available
+ENABLED_DIR=/etc/nginx/sites-enabled
 
-AVAILABLE_DIR=./test/available
-ENABLED_DIR=./test/enabled
+# AVAILABLE_DIR=./test/available
+# ENABLED_DIR=./test/enabled
 
 cat > $AVAILABLE_DIR/$DOMAIN << EOF
 server {
