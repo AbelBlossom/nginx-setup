@@ -40,7 +40,7 @@ if [ $? -ne 0 ]; then
   exit 0
 fi
 
-echo Enter The domain without www.
+echo Enter The domain without www. eg [domain.com]
 read DOMAIN
 
 echo Enter the server source url eg. [http://localhost:3000] or [ip_adr:port]
